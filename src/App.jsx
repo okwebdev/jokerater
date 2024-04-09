@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import JokeForm from "./JokeForm";
+import background from "../public/flux background.svg";
 
 function App() {
   const [jokes, setJokes] = useState([]);
@@ -17,13 +18,14 @@ function App() {
 
   return (
     <>
-      <h1>get your joke rated</h1>
+      <h1>get your joke rated 😃</h1>
 
       <JokeForm onNewJoke={handleNewJoke} />
 
       {jokes.map((jokeObj) => (
-        <div>
-          <h3>{jokeObj.text}</h3>
+        <div className="jokeContainer">
+          <p>your joke:</p>
+          <h3 className="jokeDisplay">{jokeObj.text}</h3>
 
           <p>rating: {Math.floor(Math.random() * 10)}/10</p>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 export default function JokeForm({ onNewJoke }) {
   const [text, setText] = useState("");
@@ -13,10 +14,15 @@ export default function JokeForm({ onNewJoke }) {
       <label htmlFor="">enter your Joke: </label>
       <input
         type="text"
+        className="textInput"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit">submit </button>
+      <br />
+      <br />
+      <button className="submitButton" type="submit">
+        submit{" "}
+      </button>
     </form>
   );
 }
