@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="mainContainer">
       <h1>get your joke rated 😃</h1>
 
       <JokeForm onNewJoke={handleNewJoke} />
@@ -30,7 +30,7 @@ function App() {
           <p>rating: {Math.floor(Math.random() * 10)}/10</p>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 
